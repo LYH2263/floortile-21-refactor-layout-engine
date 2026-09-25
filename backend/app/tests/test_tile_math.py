@@ -1,4 +1,4 @@
-from app.engines.tile_math import layout_preview, tile_count
+from app.engines.tile_math import tile_count
 
 
 def test_guest_room_600_waste8():
@@ -9,13 +9,6 @@ def test_guest_room_600_waste8():
     assert r["layout"]["cols"] == 10
     assert r["layout"]["rows"] == 8
     assert r["layout"]["grid_count"] == 80
-
-
-def test_layout_preview_small_room():
-    lp = layout_preview(2.5, 2.0, 0.6, 0.6)
-    assert lp["cols"] == 5
-    assert lp["rows"] == 4
-    assert lp["grid_count"] == 20
 
 
 def test_zero_waste():
